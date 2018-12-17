@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
     var count: Int = 3
     var maxima: Int = 3
     var timer = Timer()
+    
+    var player: AVAudioPlayer?
 
     @IBOutlet weak var timerText: UILabel!
     
@@ -36,7 +39,6 @@ class ViewController: UIViewController {
     
     @objc func resetMaxima(_ sender: UIButton) {
         timer.invalidate()
-        print(sender.tag)
         maxima = sender.tag
         resetTimerView()
     }
@@ -63,10 +65,28 @@ class ViewController: UIViewController {
             timerText.font = timerText.font.withSize(90)
             timerText.text = "SOLD!"
             timer.invalidate()
+            playSound()
         } else {
             timerText.text = "\(count)"
         }
     }
     
+    func playSound() {
+        guard let url = Bundle.main.url(forResource: "gavel", withExtension: "wav") else { return }
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.wav.rawValue)
+            
+            guard let player = player else { return }
+            
+            player.play()
+            
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
 }
 

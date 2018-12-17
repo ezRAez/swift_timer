@@ -10,8 +10,9 @@
 		BBB28F1921C7194100FCC172 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB28F1821C7194100FCC172 /* AppDelegate.swift */; };
 		BBB28F1B21C7194100FCC172 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB28F1A21C7194100FCC172 /* ViewController.swift */; };
 		BBB28F1E21C7194100FCC172 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBB28F1C21C7194100FCC172 /* Main.storyboard */; };
-		BBB28F2021C7194200FCC172 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBB28F1F21C7194200FCC172 /* Assets.xcassets */; };
 		BBB28F2321C7194200FCC172 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBB28F2121C7194200FCC172 /* LaunchScreen.storyboard */; };
+		BBB28F2B21C7377100FCC172 /* gavel.wav in Resources */ = {isa = PBXBuildFile; fileRef = BBB28F2A21C7377100FCC172 /* gavel.wav */; };
+		BBB28F2D21C7379200FCC172 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBB28F2C21C7379200FCC172 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,9 +20,10 @@
 		BBB28F1821C7194100FCC172 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBB28F1A21C7194100FCC172 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BBB28F1D21C7194100FCC172 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BBB28F1F21C7194200FCC172 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBB28F2221C7194200FCC172 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BBB28F2421C7194200FCC172 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBB28F2A21C7377100FCC172 /* gavel.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = gavel.wav; path = Assets.xcassets/gavel.wav; sourceTree = "<group>"; };
+		BBB28F2C21C7379200FCC172 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,10 +57,11 @@
 			isa = PBXGroup;
 			children = (
 				BBB28F1821C7194100FCC172 /* AppDelegate.swift */,
+				BBB28F2C21C7379200FCC172 /* Assets.xcassets */,
 				BBB28F1A21C7194100FCC172 /* ViewController.swift */,
 				BBB28F1C21C7194100FCC172 /* Main.storyboard */,
-				BBB28F1F21C7194200FCC172 /* Assets.xcassets */,
 				BBB28F2121C7194200FCC172 /* LaunchScreen.storyboard */,
+				BBB28F2A21C7377100FCC172 /* gavel.wav */,
 				BBB28F2421C7194200FCC172 /* Info.plist */,
 			);
 			path = timer_test;
@@ -123,7 +126,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBB28F2321C7194200FCC172 /* LaunchScreen.storyboard in Resources */,
-				BBB28F2021C7194200FCC172 /* Assets.xcassets in Resources */,
+				BBB28F2B21C7377100FCC172 /* gavel.wav in Resources */,
+				BBB28F2D21C7379200FCC172 /* Assets.xcassets in Resources */,
 				BBB28F1E21C7194100FCC172 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
