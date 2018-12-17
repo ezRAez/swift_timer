@@ -24,20 +24,43 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="5It-nH-Hnn">
+                                <rect key="frame" x="112.5" y="617" width="150" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6p-4w-GhV">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="3"/>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bh-jO-eA1">
+                                        <rect key="frame" x="60" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="5"/>
+                                    </button>
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6O-2H-4OL">
+                                        <rect key="frame" x="120" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="7"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="svC-hd-zxL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MT1-1A-hZn"/>
                             <constraint firstItem="svC-hd-zxL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="j5n-cq-D4M"/>
+                            <constraint firstItem="5It-nH-Hnn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nmn-Y7-km7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5It-nH-Hnn" secondAttribute="bottom" constant="20" id="rh4-TN-ZlJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="fiveButton" destination="7bh-jO-eA1" id="5ux-aI-oSs"/>
+                        <outlet property="sevenButton" destination="N6O-2H-4OL" id="d25-Zu-oCB"/>
+                        <outlet property="threeButton" destination="T6p-4w-GhV" id="TQy-9s-Xvm"/>
                         <outlet property="timerText" destination="svC-hd-zxL" id="p7Y-m6-Pdr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
         </scene>
     </scenes>
 </document>

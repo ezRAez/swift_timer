@@ -16,18 +16,40 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var timerText: UILabel!
     
+    @IBOutlet weak var threeButton: UIButton!
+    @IBOutlet weak var fiveButton: UIButton!
+    @IBOutlet weak var sevenButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.restartCount(_:)))
         self.view.addGestureRecognizer(tap)
+        let viewController = self
         // Do any additional setup after loading the view, typically from a nib.
+        threeButton.addTarget(self ,action: #selector(viewController.resetMaxima(_:)),
+                          for:.touchUpInside)
+        fiveButton.addTarget(self ,action: #selector(viewController.resetMaxima(_:)),
+                              for:.touchUpInside)
+        sevenButton.addTarget(self ,action: #selector(viewController.resetMaxima(_:)),
+                              for:.touchUpInside)
+    }
+    
+    @objc func resetMaxima(_ sender: UIButton) {
+        timer.invalidate()
+        print(sender.tag)
+        maxima = sender.tag
+        resetTimerView()
+    }
+    
+    func resetTimerView() {
+        count = maxima
+        timerText.font = timerText.font.withSize(200)
+        timerText.text = "\(count)"
     }
 
     @objc func restartCount(_ sender: UITapGestureRecognizer) {
         timer.invalidate()
-        count = maxima
-        timerText.font = timerText.font.withSize(200)
-        timerText.text = "\(count)"
+        resetTimerView()
         runTimer()
     }
     
